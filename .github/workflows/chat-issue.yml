@@ -1,0 +1,26 @@
+---
+name: "Test: Chat Message for new Issue"
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  google-chat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Message
+        uses: Co-qn/google-chat-notification@releases/v1
+        with:
+          name: ${{ github.workflow }}
+          url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          status: failure
