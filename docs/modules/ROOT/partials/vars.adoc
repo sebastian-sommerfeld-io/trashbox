@@ -1,0 +1,3 @@
+Sebastian Sommerfeld <sebastian@sommerfeld.io>
+:project-name: jira-scripts
+:url-project: https://gitlab.pnw.loc/applications/kollaboration/jira/{project-name}
